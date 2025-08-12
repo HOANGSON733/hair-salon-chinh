@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r">
-                <img src="/logo.png" alt="" />
+                <img src="/Logo.png" alt="" />
               </div>
               <span className="text-2xl font-bold">Hair Salon Chính</span>
             </div>
