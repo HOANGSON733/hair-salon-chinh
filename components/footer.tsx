@@ -10,8 +10,13 @@ export default function Footer() {
           {/* Logo & Slogan */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r">
-                <img src="/Logo.png" alt="" />
+              <div className="w-10 h-10 relative">
+                <Image
+                  src="/Logo-footer.png"
+                  alt="Logo Hair Salon Chính"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="text-2xl font-bold">Hair Salon Chính</span>
             </div>

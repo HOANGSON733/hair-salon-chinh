@@ -25,11 +25,11 @@ export default function ProductsClientPage() {
   return (
     <div className="min-h-screen">
       <ProductHero />
-      <ProductCategories
-        categories={categories}
-        selectedCategory={selectedCategory}
-        onCategoryChange={handleCategoryChange}
-      />
+        <ProductCategories
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onCategoryChange={handleCategoryChange}
+        />
       <ProductGrid products={products} filteredProducts={filteredProducts} />
       <ProductFeatures />
       <ProductCTA />

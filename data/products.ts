@@ -2,12 +2,14 @@ import type { Product } from "@/components/products/product-card"
 
 export const categories = [
   { id: "all", name: "Tất cả sản phẩm" },
-  { id: "shampoo", name: "Dầu gội" },
+  
   { id: "conditioner", name: "Dầu xả" },
   { id: "treatment", name: "Kem ủ tóc" },
+  { id: "shampoo", name: "Dầu gội" },
+   { id: "tools", name: "Dụng cụ" },
   { id: "serum", name: "Serum & Tinh dầu" },
   { id: "styling", name: "Sản phẩm tạo kiểu" },
-  { id: "tools", name: "Dụng cụ" },
+ 
 ]
 
 export const products: Product[] = [

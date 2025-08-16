@@ -1,7 +1,6 @@
 import ServicesHero from "@/components/services/services-hero"
 import ServicesGrid from "@/components/services/services-grid"
 import ServicesCTA from "@/components/services/services-cta"
-
 export const metadata = {
   title: "Dịch vụ - Hair Salon Chính",
   description:
@@ -13,7 +12,8 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <ServicesHero />
       <ServicesGrid />
-      <ServicesCTA />
+      {/* <ServicesCTA /> */}
+
     </div>
   )
 }
