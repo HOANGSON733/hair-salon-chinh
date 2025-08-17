@@ -6,7 +6,7 @@ export default function AchievementsSection() {
     {
       icon: Award,
       title: "Top 10 Salon uy tín",
-      description: "Được bình chọn trong top 10 salon uy tín nhất TP.HCM",
+      description: "Được bình chọn trong top 10 salon uy tín nhất Kiên Giang năm 2018",
     },
     {
       icon: Users,
@@ -15,8 +15,8 @@ export default function AchievementsSection() {
     },
     {
       icon: Clock,
-      title: "10+ năm kinh nghiệm",
-      description: "Hơn 10 năm hoạt động trong ngành làm đẹp",
+      title: "15 năm kinh nghiệm",
+      description: "Hơn năm hoạt động trong ngành làm đẹp",
     },
     {
       icon: Heart,

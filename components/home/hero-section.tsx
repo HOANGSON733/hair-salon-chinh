@@ -1,7 +1,10 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Dancing_Script } from "next/font/google"
+import { motion } from "framer-motion"
 
 // Import font Google mềm mại
 const dancingScript = Dancing_Script({
@@ -9,39 +12,72 @@ const dancingScript = Dancing_Script({
   weight: ["400", "700"],
 })
 
+// Variants cho container và item (stagger)
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3, // delay giữa các phần tử con
+    },
+  },
+}
+
+const item = {
+  hidden: { y: 50, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { type: "spring" as const, stiffness: 60, damping: 15 } },
+}
+
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-orange-50 to-amber-50">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-orange-50 to-amber-50 overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <motion.div
+        className="absolute inset-0 z-0"
+        initial={{ opacity: 0, scale: 1.05 }}
+        animate={{ opacity: 0.2, scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      >
         <Image
           src="/modern-hair-salon.png"
           alt="Hair Salon Chính"
           fill
-          className="object-cover opacity-20"
+          className="object-cover"
           priority
         />
-      </div>
+      </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="relative z-10 text-center max-w-4xl mx-auto px-4"
+      >
         {/* Title */}
-        <h1
+        <motion.h1
+          variants={item}
           className={`text-[36px] sm:text-[48px] md:text-[64px] lg:text-[80px] font-bold text-gray-900 mb-6 ${dancingScript.className}`}
         >
           HAIR SALON{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-600">
             CHÍNH
           </span>
-        </h1>
+        </motion.h1>
 
         {/* Subtitle */}
-        <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-8 font-serif">
+        <motion.p
+          variants={item}
+          className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-8 font-serif"
+        >
           Nơi tạo nên vẻ đẹp hoàn hảo cho mái tóc của bạn
-        </p>
+        </motion.p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <motion.div
+          variants={item}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
           <Button
             size="lg"
             asChild
@@ -57,8 +93,8 @@ export default function HeroSection() {
           >
             <Link href="/services">Xem dịch vụ</Link>
           </Button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   )
 }

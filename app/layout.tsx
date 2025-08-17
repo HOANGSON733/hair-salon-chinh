@@ -14,9 +14,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hair Salon Chính - Salon Tóc Chuyên Nghiệp",
     description: "Salon tóc chuyên nghiệp với dịch vụ chất lượng cao",
-    images: ["/images/salon-hero.jpg"],
+    url: "https://hair-salon-chinh-fe.vercel.app/Logo-Chinh.png",
   },
-  generator: "v0.dev",
+  // generator: "v0.dev",
+  metadataBase: new URL("https://hair-salon-chinh-fe.vercel.app/"),
 }
 
 export default function RootLayout({
@@ -41,7 +42,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        
+
         {/* Additional favicon support */}
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />

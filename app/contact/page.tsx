@@ -58,17 +58,18 @@ export default function ContactPage() {
               <Card>
                 <CardContent className="p-4 md:p-6">
                   <div className="flex items-start space-x-3 md:space-x-4">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-full flex items-center justify-center">
+                    <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-full flex items-center justify-center">
                       <MapPin className="w-5 h-5 md:w-6 md:h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">Địa chỉ</h3>
                       <p className="text-gray-600 text-sm md:text-base">
-                        Khu Phố 6, Thị Trán Giồng Riềng, <br /> Huyện Giồng Riềng, Tỉnh Kiên Giang
+                        Khu Phố 6, Thị Trán Giồng Riềng, Huyện Giồng Riềng, Tỉnh Kiên Giang
                       </p>
                     </div>
                   </div>
                 </CardContent>
+
               </Card>
 
               {/* Phone */}
@@ -82,6 +83,9 @@ export default function ContactPage() {
                       <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">Số điện thoại</h3>
                       <a href="tel:0967100552" className="text-orange-500 hover:text-orange-700 font-medium text-sm md:text-base">
                         0967 100 552
+                      </a>
+                      <a href="tel:0332929894" className="text-orange-500 hover:text-orange-700 font-medium text-sm md:text-base">
+                        0332929894
                       </a>
                       <p className="text-gray-600 text-xs md:text-sm mt-1">Bấm để gọi trực tiếp</p>
                     </div>

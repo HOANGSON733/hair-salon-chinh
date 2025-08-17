@@ -9,22 +9,27 @@ export default function HistorySection() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Lịch sử hình thành</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Hair Salon Chính được thành lập vào năm 2014 bởi chị Lê Xuân Chính - một stylist với niềm đam mê cháy
-                bỏng dành cho nghệ thuật làm tóc. Bắt đầu từ một salon nhỏ với chỉ 2 ghế cắt tóc, chúng tôi đã không
-                ngừng phát triển và hoàn thiện.
+                Hair Salon Chính được thành lập vào năm <strong>2018</strong> bởi anh <strong>Lê Xuân Chính</strong> – 
+                một stylist với hơn <strong>10 năm kinh nghiệm</strong> trong ngành làm đẹp. Từ những ngày đầu chỉ 
+                với một không gian nhỏ và vài ghế cắt tóc, salon đã dần khẳng định vị thế của mình.
               </p>
               <p>
-                Qua 10 năm hoạt động, Hair Salon Chính đã trở thành một trong những địa chỉ tin cậy nhất tại TP.HCM.
-                Chúng tôi tự hào đã phục vụ hơn 10,000 khách hàng và nhận được vô số lời khen ngợi.
+                Trong suốt chặng đường phát triển, Hair Salon Chính đã phục vụ hàng chục nghìn khách hàng tại 
+                TP.HCM và các khu vực lân cận. Không chỉ mang đến những kiểu tóc thời thượng, chúng tôi còn chú 
+                trọng đến trải nghiệm dịch vụ và sự hài lòng của khách hàng.
               </p>
               <p>
-                Năm 2020, chúng tôi mở rộng quy mô với không gian mới rộng rãi, hiện đại và bổ sung thêm nhiều dịch vụ
-                chăm sóc tóc cao cấp. Đội ngũ stylist của chúng tôi cũng được mở rộng với những tài năng trẻ, đầy nhiệt
-                huyết.
+                Năm 2022, salon mở rộng không gian hiện đại, trang bị thêm nhiều công nghệ chăm sóc tóc tiên tiến 
+                như phục hồi keratin, nhuộm phủ bóng nano và tạo kiểu chuẩn quốc tế. Đội ngũ stylist trẻ trung, 
+                sáng tạo cùng kinh nghiệm vững chắc đã giúp chúng tôi giữ vững niềm tin của khách hàng.
+              </p>
+              <p>
+                Với sứ mệnh <em>“Tôn vinh vẻ đẹp và sự tự tin của mỗi khách hàng”</em>, Hair Salon Chính không ngừng 
+                đổi mới để trở thành điểm đến tin cậy cho mọi phong cách tóc.
               </p>
             </div>
           </div>
-          <div className="relative h-96 rounded-lg overflow-hidden">
+          <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
             <Image
               src="/lichsuhinhthanh.jpg"
               alt="Lịch sử Hair Salon Chính"

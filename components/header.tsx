@@ -26,7 +26,7 @@ export default function Header() {
     },
     { name: "Sản phẩm", href: "/products" },
     { name: "Hình ảnh", href: "/gallery" },
-    { name: "Đánh giá", href: "/reviews" },
+    { name: "Đào tạo", href: "/dao-tao" },
     { name: "Liên hệ", href: "/contact" },
   ]
 

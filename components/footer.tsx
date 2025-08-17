@@ -24,19 +24,18 @@ export default function Footer() {
               Nơi tạo nên vẻ đẹp hoàn hảo cho mái tóc của bạn. Chuyên nghiệp - Uy tín - Chất lượng.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-orange-500 transition-colors">
+              <Link href="https://www.facebook.com/hairchinhsalon" target="_blank" className="text-gray-300 hover:text-orange-500 transition-colors">
                 <Facebook className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-orange-500 transition-colors">
+              </Link>
+              <Link href="https://www.instagram.com/chinh.le.58726823/" target="_blank" className="text-gray-300 hover:text-orange-500 transition-colors">
                 <Instagram className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-orange-500 transition-colors">
+              </Link>
+              <Link href="https://www.tiktok.com/@hair_salon_chinh" target="_blank" className="text-gray-300 hover:text-orange-500 transition-colors">
                 <FaTiktok className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-orange-500 transition-colors">
+              </Link>
+              <Link href="https://youtube.com" target="_blank" className="text-gray-300 hover:text-orange-500 transition-colors">
                 <Youtube className="w-6 h-6" />
-              </a>
-
+              </Link>
             </div>
 
           </div>
@@ -83,7 +82,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Thông tin liên hệ</h3>
             <ul className="space-y-3">
               <li className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-orange-500" />
+                <MapPin className="w-6 h-6 text-orange-500" />
                 <span className="text-gray-300">Khu phố 6 Thị Trấn Giồng Riềng Tỉnh Kiên Giang. </span>
               </li>
               <li className="flex items-center space-x-2">
@@ -104,7 +103,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Hair Salon Chính. Tất cả quyền được bảo lưu. |
+            © {new Date().getFullYear()} Nguyễn Hoàng Sơn. Tất cả quyền được bảo lưu. |
             <Link href="/privacy" className="hover:text-orange-500 ml-1">
               Chính sách bảo mật
             </Link>{" "}

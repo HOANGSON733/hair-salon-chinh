@@ -71,14 +71,22 @@ export default function DieuKhoan() {
         {/* Liên hệ */}
         <section>
           <h2 className="text-xl font-semibold mb-2">7. Liên hệ</h2>
-          nav
+          <p>
+            Mọi thắc mắc hoặc góp ý xin vui lòng liên hệ qua:
+            <br />
+            📍 Địa chỉ: Khu phố 6 Thị Trấn Giồng Riềng Tỉnh Kiên Giang.
+            <br />
+            📞 Hotline: <a href="tel: 0967 100 552" className="text-blue-600 underline"> 0967 100 552</a>
+            <br />
+            📧 Email: <a href="mailto:yen22071992@gmail.com" className="text-blue-600 underline">yen22071992@gmail.com</a>
+          </p>
         </section>
       </main>
 
       {/* Footer */}
       <footer className="bg-white border-t mt-10">
         <div className="container mx-auto px-4 py-6 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Hair Salon Chính. Bảo lưu mọi quyền.
+          © {new Date().getFullYear()}@2024 Nguyễn Hoàng Sơn. Bảo lưu mọi quyền.
         </div>
       </footer>
     </div>

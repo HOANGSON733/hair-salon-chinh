@@ -19,7 +19,7 @@ export default function TeamSection() {
     },
     {
       name: "Nguyễn Hoàng Thái",
-      position: "BarBer",
+      position: "Barber",
       experience: "8 năm kinh nghiệm",
       specialty: "Chuyên về tạo kiểu nam",
       image: "/thai.jpg",
