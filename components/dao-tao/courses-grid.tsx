@@ -1,8 +1,9 @@
-import CourseCard, { type Course } from "./course-card"
+import CourseCard from "./course-card"
+import type { Service } from "@/data/services"
 
 interface CoursesGridProps {
-  courses: Course[]
-  filteredCourses: Course[]
+  courses: Service[] // Sử dụng Service[] thay vì Course[]
+  filteredCourses: Service[]
 }
 
 export default function CoursesGrid({ courses, filteredCourses }: CoursesGridProps) {

@@ -7,40 +7,25 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, CheckCircle } from "lucide-react"
 import TrainingRegistrationForm from "./training-registration-form"
-
-export interface Course {
-  id: number
-  name: string
-  category: string
-  duration: string
-  price: string
-  students: number
-  rating: number
-  level: string
-  image: string
-  description: string
-  features: string[]
-  schedule: string
-  instructor: string
-}
+import type { Service } from "@/data/services"
 
 interface CourseCardProps {
-  course: Course
+  course: Service // Sử dụng Service interface chung
 }
 
 export default function CourseCard({ course }: CourseCardProps) {
   const [isFormOpen, setIsFormOpen] = useState(false)
 
-  const renderStars = (rating: number) => {
-    return (
-      <div className="flex items-center">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <Star key={star} className={`w-4 h-4 ${star <= rating ? "text-yellow-400 fill-current" : "text-gray-300"}`} />
-        ))}
-        <span className="ml-1 text-sm text-gray-600">({rating})</span>
-      </div>
-    )
-  }
+  // const renderStars = (rating = 4.8) => {
+  //   return (
+  //     <div className="flex items-center">
+  //       {[1, 2, 3, 4, 5].map((star) => (
+  //         <Star key={star} className={`w-4 h-4 ${star <= rating ? "text-yellow-400 fill-current" : "text-gray-300"}`} />
+  //       ))}
+  //       <span className="ml-1 text-sm text-gray-600">({rating})</span>
+  //     </div>
+  //   )
+  // }
 
   const handleRegisterClick = () => {
     setIsFormOpen(true)
@@ -57,7 +42,9 @@ export default function CourseCard({ course }: CourseCardProps) {
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-300"
             />
-            <Badge className="absolute top-3 left-3 bg-orange-500 text-white">{course.level}</Badge>
+            <Badge className="absolute top-3 left-3 bg-orange-500 text-white">
+              {course.category === "academy" ? "Khóa học" : "Dịch vụ"}
+            </Badge>
           </div>
 
           <div className="p-6">
@@ -74,22 +61,10 @@ export default function CourseCard({ course }: CourseCardProps) {
                 <span className="text-sm text-gray-500">Thời gian:</span>
                 <span className="text-sm text-gray-700">{course.duration}</span>
               </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500">Học viên:</span>
-                <span className="text-sm text-gray-700">{course.students} người</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500">Lịch học:</span>
-                <span className="text-sm text-gray-700">{course.schedule}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-gray-500">Giảng viên:</span>
-                <span className="text-sm text-gray-700">{course.instructor}</span>
-              </div>
             </div>
 
             {/* Rating */}
-            <div className="mb-4">{renderStars(course.rating)}</div>
+            {/* <div className="mb-4">{renderStars()}</div> */}
 
             {/* Features */}
             <div className="mb-6">
