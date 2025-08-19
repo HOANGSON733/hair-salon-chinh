@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button"
 export default function CTAButtons() {
   return (
     <div className="hidden md:flex items-center space-x-3">
-      <a href="tel:0123456789" className="flex items-center space-x-1 text-orange-600 hover:text-orange-700">
+      <a href="tel:0967100552" className="flex items-center space-x-1 text-orange-600 hover:text-orange-700">
         <Phone className="w-4 h-4" />
-        <span className="font-medium text-sm">0123 456 789</span>
+        <span className="font-medium text-sm">0967100552</span>
       </a>
       <Button
         asChild

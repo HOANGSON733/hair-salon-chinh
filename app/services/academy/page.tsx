@@ -2,7 +2,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { GraduationCap, Users, Crown, ArrowLeft, BookOpen, Award, Clock } from "lucide-react"
+import { Users, ArrowLeft, BookOpen, Award, Clock } from "lucide-react"
+import { getAcademyServices } from "@/data/services"
+import CTASection from "@/components/shared/cta-section"
 
 export const metadata = {
   title: "Hair Academy - Hair Salon Chính",
@@ -10,35 +12,7 @@ export const metadata = {
 }
 
 export default function AcademyPage() {
-  const courses = [
-    {
-      name: "Khóa học cơ bản",
-      description: "Khóa học cắt tóc cơ bản cho người mới bắt đầu, nắm vững kiến thức nền tảng",
-      price: "Từ 2.000.000đ",
-      duration: "1 tháng",
-      icon: GraduationCap,
-      image: "/placeholder.svg?height=250&width=350",
-      features: ["Lý thuyết cơ bản", "Thực hành trên mô hình", "Chứng chỉ hoàn thành", "Tài liệu học tập"],
-    },
-    {
-      name: "Khóa học nâng cao",
-      description: "Khóa học chuyên sâu về kỹ thuật cắt tóc, nhuộm và tạo kiểu chuyên nghiệp",
-      price: "Từ 3.500.000đ",
-      duration: "2 tháng",
-      icon: Users,
-      image: "/placeholder.svg?height=250&width=350",
-      features: ["Kỹ thuật nâng cao", "Thực hành khách thật", "Chứng chỉ chuyên nghiệp", "Hỗ trợ thực tập"],
-    },
-    {
-      name: "Khóa học chuyên gia",
-      description: "Khóa học toàn diện để trở thành stylist chuyên nghiệp với đầy đủ kỹ năng",
-      price: "Từ 5.000.000đ",
-      duration: "3 tháng",
-      icon: Crown,
-      image: "/placeholder.svg?height=250&width=350",
-      features: ["Toàn diện tất cả kỹ thuật", "Quản lý salon", "Chứng chỉ quốc tế", "Hỗ trợ việc làm"],
-    },
-  ]
+  const courses = getAcademyServices()
 
   const benefits = [
     {
@@ -172,25 +146,19 @@ export default function AcademyPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-amber-600 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Bắt đầu hành trình nghề nghiệp của bạn</h2>
-          <p className="text-xl mb-8">Đăng ký ngay hôm nay để trở thành stylist chuyên nghiệp</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-white text-orange-600 hover:bg-gray-100">
-              <Link href="/booking">Đăng ký ngay</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="border-white text-white hover:bg-white hover:text-orange-600 bg-transparent"
-            >
-              <a href="tel:0123456789">Tư vấn: 0123 456 789</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+     <CTASection
+        title="Bắt đầu hành trình nghề nghiệp của bạn"
+        description="Đăng ký ngay hôm nay để trở thành stylist chuyên nghiệp"
+        primaryButton={{
+          text: "Đăng ký ngay",
+          href: "/booking",
+        }}
+        secondaryButton={{
+          text: "Tư vấn: 0967100552",
+          href: "tel:0967100552",
+          isPhone: true,
+        }}
+      />
     </div>
   )
 }

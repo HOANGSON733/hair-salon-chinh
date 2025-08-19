@@ -27,9 +27,9 @@ export default function MobileNavigation({ isOpen, activeDropdown, onToggleDropd
           />
         ))}
         <div className="flex flex-col space-y-2 pt-4 border-t">
-          <a href="tel:0123456789" className="flex items-center space-x-2 text-orange-600">
+          <a href="tel:0967100552" className="flex items-center space-x-2 text-orange-600">
             <Phone className="w-4 h-4" />
-            <span className="font-medium text-sm">0123 456 789</span>
+            <span className="font-medium text-sm">0967100552</span>
           </a>
           <Button asChild className="bg-gradient-to-r from-orange-500 to-amber-600">
             <Link href="/booking">Đặt lịch</Link>

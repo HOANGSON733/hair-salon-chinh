@@ -2,7 +2,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Scissors, Crown, Sparkles, ArrowLeft } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
+import { getChamSocPhucHoiToc } from "@/data/services" 
+import CTASection from "@/components/shared/cta-section"
 
 export const metadata = {
   title: "Chăm Sóc & Phục Hồi Tóc - Hair Salon Chính",
@@ -11,36 +13,7 @@ export const metadata = {
 }
 
 export default function ChamSocPhucHoiToc() {
-  const services = [
-    {
-      name: "Phục hồi tóc cơ bản",
-      description: "Dịch vụ phục hồi tóc hư tổn nhẹ, giúp tóc mềm mượt tự nhiên",
-      price: "Từ 200.000đ - 400.000đ",
-      duration: "45-60 phút",
-      icon: Scissors,
-      image: "/placeholder.svg?height=250&width=350",
-      features: ["Gội xả chuyên dụng", "Ủ dưỡng phục hồi", "Massage da đầu", "Sấy tạo kiểu nhẹ nhàng"],
-    },
-    {
-      name: "Phục hồi tóc chuyên sâu",
-      description: "Phục hồi tóc hư tổn nặng bằng công nghệ hiện đại",
-      price: "Từ 500.000đ - 800.000đ",
-      duration: "60-90 phút",
-      icon: Crown,
-      image: "/placeholder.svg?height=250&width=350",
-      features: ["Liệu trình keratin/ collagen", "Dưỡng chất cao cấp", "Kỹ thuật chuyên nghiệp", "Tư vấn chăm sóc tại nhà"],
-    },
-    {
-      name: "Liệu trình phục hồi premium",
-      description: "Phục hồi tóc cao cấp dành cho tóc tẩy, tóc nhuộm nhiều lần",
-      price: "Từ 900.000đ - 1.500.000đ",
-      duration: "90-120 phút",
-      icon: Sparkles,
-      image: "/placeholder.svg?height=250&width=350",
-      features: ["Tinh chất nhập khẩu", "Công nghệ phục hồi chuyên sâu", "Kết quả lâu dài", "Phù hợp mọi loại tóc"],
-    },
-  ]
-
+  const services = getChamSocPhucHoiToc()
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -125,25 +98,19 @@ export default function ChamSocPhucHoiToc() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-amber-600 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Muốn phục hồi tóc chắc khỏe, bóng mượt?</h2>
-          <p className="text-xl mb-8">Đặt lịch ngay hôm nay để trải nghiệm dịch vụ chăm sóc & phục hồi tóc chuyên nghiệp</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-white text-orange-600 hover:bg-gray-100">
-              <Link href="/booking">Đặt lịch ngay</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="border-white text-white hover:bg-white hover:text-orange-600 bg-transparent"
-            >
-              <a href="tel:0123456789">Gọi ngay: 0123 456 789</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title="Muốn phục hồi tóc chắc khỏe, bóng mượt?"
+        description="Đặt lịch ngay hôm nay để trải nghiệm dịch vụ chăm sóc & phục hồi tóc chuyên nghiệp"
+        primaryButton={{
+          text: "Đặt lịch ngay",
+          href: "/booking",
+        }}
+        secondaryButton={{
+          text: "Gọi ngay: 0967100552",
+          href: "tel:0967100552",
+          isPhone: true,
+        }}
+      />
     </div>
   )
 }

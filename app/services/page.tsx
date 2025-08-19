@@ -12,7 +12,7 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <ServicesHero />
       <ServicesGrid />
-      {/* <ServicesCTA /> */}
+      <ServicesCTA />
 
     </div>
   )

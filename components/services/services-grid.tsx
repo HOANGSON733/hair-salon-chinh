@@ -1,5 +1,5 @@
 import ServiceCategorySection from "./service-category-section"
-import { serviceCategories } from "./services-data"
+import { serviceCategories } from "@/data/services"
 
 const getCategoryId = (categoryName: string) => {
   const idMap: { [key: string]: string } = {

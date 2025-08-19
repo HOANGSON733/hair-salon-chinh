@@ -367,9 +367,9 @@ export default function BookingPage() {
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-4">Hoặc liên hệ trực tiếp với chúng tôi:</p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <a href="tel:0123456789" className="flex items-center text-orange-600 hover:text-orange-700 font-medium">
+              <a href="tel:0967100552" className="flex items-center text-orange-600 hover:text-orange-700 font-medium">
                 <Phone className="w-4 h-4 mr-2" />
-                0123 456 789
+                0967100552
               </a>
               <span className="hidden sm:block text-gray-400">|</span>
               <a

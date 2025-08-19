@@ -1,6 +1,7 @@
 import ServiceCategoryHeader from "./service-category-header"
 import ServiceCategoryGrid from "./service-category-grid"
-import type { ServiceCategory } from "./services-data"
+import { ServiceCategory } from "@/data/services"
+// import type { ServiceCategory } from "./services-data"
 
 interface ServiceCategorySectionProps {
   category: ServiceCategory

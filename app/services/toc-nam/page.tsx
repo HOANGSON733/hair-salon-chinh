@@ -2,43 +2,16 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Scissors, Users, Crown, ArrowLeft } from "lucide-react"
-
+import { ArrowLeft } from "lucide-react"
+import { getMenHairServices } from "@/data/services"
+import CTASection from "@/components/shared/cta-section"
 export const metadata = {
   title: "Dịch vụ Tóc Nam - Hair Salon Chính",
   description: "Dịch vụ cắt tóc nam chuyên nghiệp tại Hair Salon Chính. Từ cơ bản đến cao cấp, tạo kiểu sự kiện.",
 }
 
 export default function TocNamPage() {
-  const services = [
-    {
-      name: "Cắt tóc nam cơ bản",
-      description: "Tạo kiểu tóc nam hiện đại, phù hợp với khuôn mặt và phong cách cá nhân",
-      price: "Từ 120.000đ - 200.000đ",
-      duration: "30-45 phút",
-      icon: Scissors,
-      image: "/placeholder.svg?height=250&width=350",
-      features: ["Tư vấn kiểu tóc", "Cắt tạo kiểu", "Gội đầu massage", "Sấy tạo kiểu"],
-    },
-    {
-      name: "Tóc nam chuyên nghiệp",
-      description: "Dịch vụ tóc nam cao cấp với kỹ thuật hiện đại và phong cách độc đáo",
-      price: "Từ 200.000đ - 400.000đ",
-      duration: "45-60 phút",
-      icon: Users,
-      image: "/placeholder.svg?height=250&width=350",
-      features: ["Tư vấn phong cách", "Cắt tỉa chuyên nghiệp", "Tạo kiểu cao cấp", "Chăm sóc da đầu"],
-    },
-    {
-      name: "Tạo kiểu tóc nam sự kiện",
-      description: "Tạo kiểu tóc nam cho các dịp đặc biệt: cưới hỏi, công việc, tiệc tùng",
-      price: "Từ 250.000đ - 500.000đ",
-      duration: "45-75 phút",
-      icon: Crown,
-      image: "/placeholder.svg?height=250&width=350",
-      features: ["Thiết kế theo sự kiện", "Sản phẩm cao cấp", "Bền đẹp cả ngày", "Tư vấn phong cách"],
-    },
-  ]
+  const services = getMenHairServices()
 
   return (
     <div className="min-h-screen">
@@ -125,25 +98,19 @@ export default function TocNamPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-amber-600 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Sẵn sàng thay đổi phong cách?</h2>
-          <p className="text-xl mb-8">Đặt lịch ngay hôm nay để trải nghiệm dịch vụ tóc nam chuyên nghiệp</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild className="bg-white text-orange-600 hover:bg-gray-100">
-              <Link href="/booking">Đặt lịch ngay</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="border-white text-white hover:bg-white hover:text-orange-600 bg-transparent"
-            >
-              <a href="tel:0123456789">Gọi ngay: 0123 456 789</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title="Sẵn sàng thay đổi phong cách?"
+        description="Đặt lịch ngay hôm nay để trải nghiệm dịch vụ tóc nam chuyên nghiệp"
+        primaryButton={{
+          text: "Đặt lịch ngay",
+          href: "/booking",
+        }}
+        secondaryButton={{
+          text: "Gọi ngay: 0967100552",
+          href: "tel:0967100552",
+          isPhone: true,
+        }}
+      />
     </div>
   )
 }

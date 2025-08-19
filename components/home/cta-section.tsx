@@ -17,7 +17,7 @@ export default function CTASection() {
             asChild
             className="border-white text-white hover:bg-white hover:text-orange-600 text-lg px-8 py-3 bg-transparent"
           >
-            <a href="tel:0123456789">Gọi ngay:0967 100 552</a>
+            <a href="tel:0967100552">Gọi ngay:0967 100 552</a>
           </Button>
         </div>
       </div>

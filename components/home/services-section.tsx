@@ -2,39 +2,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Scissors, Palette, Waves, Sparkles, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import { getAllServices } from "@/data/services"
 
 export default function ServicesSection() {
-  const services = [
-    {
-      name: "Cắt tóc",
-      description: "Tạo kiểu tóc phù hợp với khuôn mặt",
-      price: "Từ 150.000đ",
-      icon: Scissors,
-      image: "/hair-cutting-service.png",
-    },
-    {
-      name: "Nhuộm tóc",
-      description: "Màu tóc thời trang, an toàn",
-      price: "Từ 300.000đ",
-      icon: Palette,
-      image: "/hair-coloring-service.png",
-    },
-    {
-      name: "Uốn tóc",
-      description: "Tạo độ xoăn tự nhiên, bền đẹp",
-      price: "Từ 250.000đ",
-      icon: Waves,
-      image: "/hair-perming-service.png",
-    },
-    {
-      name: "Chăm sóc tóc",
-      description: "Phục hồi tóc hư tổn, nuôi dưỡng",
-      price: "Từ 200.000đ",
-      icon: Sparkles,
-      image: "/hair-treatment-service.png",
-    },
-  ]
+  // Lấy 4 dịch vụ đầu tiên
+  const featuredServices = getAllServices().slice(0, 4)
 
   return (
     <section className="py-16 bg-gray-50">
@@ -44,7 +17,7 @@ export default function ServicesSection() {
           <p className="text-lg text-gray-600">Khám phá các dịch vụ chăm sóc tóc chuyên nghiệp của chúng tôi</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
+          {featuredServices.map((service, index) => (
             <Card key={index} className="group hover:shadow-lg transition-shadow">
               <CardContent className="p-0">
                 <div className="relative h-48 overflow-hidden rounded-t-lg">
