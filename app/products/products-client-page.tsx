@@ -22,15 +22,20 @@ export default function ProductsClientPage() {
     setSelectedCategory(categoryId)
   }
 
+  const filteredProductCount = filteredProducts.length
+
   return (
     <div className="min-h-screen">
       <ProductHero />
-        <ProductCategories
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onCategoryChange={handleCategoryChange}
-        />
+      <ProductCategories
+        categories={categories}
+        selectedCategory={selectedCategory}
+        onCategoryChange={handleCategoryChange}
+      />
       <ProductGrid products={products} filteredProducts={filteredProducts} />
+      <div className="text-center mt-4">
+        <p>{`Số lượng sản phẩm được lọc: ${filteredProductCount}`}</p>
+      </div>
       <ProductFeatures />
       <ProductCTA />
     </div>

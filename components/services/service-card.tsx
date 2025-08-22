@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import type { Service } from "./services-data"
+import type { Service } from "@/data/services"
 
 interface ServiceCardProps {
   service: Service

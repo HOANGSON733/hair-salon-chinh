@@ -1,6 +1,6 @@
-import type Service from "@/components/dao-tao/course-card"
+// import type Service from "@/components/dao-tao/course-card"
 import { Users, Palette } from "lucide-react"
-
+import type { Service } from "@/data/services"
 export const courseCategories = [
   { id: "all", name: "Tất cả khóa học" },
   { id: "basic", name: "Cơ bản" },

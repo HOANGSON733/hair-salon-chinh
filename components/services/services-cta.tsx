@@ -11,7 +11,7 @@ export default function ServicesCTA() {
       }}
       secondaryButton={{
         text: "Gọi ngay: 0967100552",
-        href: "tel:0967100552",
+        href: "tel:0967 100 552",
         isPhone: true,
       }}
     />

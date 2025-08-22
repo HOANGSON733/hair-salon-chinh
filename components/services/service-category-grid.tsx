@@ -1,5 +1,5 @@
 import ServiceCard from "./service-card"
-import type { Service } from "./services-data"
+import type { Service } from "@/data/services"
 
 interface ServiceCategoryGridProps {
   services: Service[]
