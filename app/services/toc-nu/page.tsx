@@ -77,7 +77,7 @@ export default function TocNuPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-8">
                 {filteredServices.map((service, index) => (
                   <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
                     <CardContent className="p-0">

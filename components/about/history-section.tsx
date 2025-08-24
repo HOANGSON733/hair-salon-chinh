@@ -10,7 +10,7 @@ export default function HistorySection() {
             <div className="space-y-4 text-gray-600">
               <p>
                 Hair Salon Chính được thành lập vào năm <strong>2018</strong> bởi anh <strong>Lê Xuân Chính</strong> – 
-                một stylist với hơn <strong>10 năm kinh nghiệm</strong> trong ngành làm đẹp. Từ những ngày đầu chỉ 
+                một stylist với hơn <strong>15 năm kinh nghiệm</strong> trong ngành làm đẹp. Từ những ngày đầu chỉ 
                 với một không gian nhỏ và vài ghế cắt tóc, salon đã dần khẳng định vị thế của mình.
               </p>
               <p>

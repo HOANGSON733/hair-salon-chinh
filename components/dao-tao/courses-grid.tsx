@@ -1,5 +1,5 @@
 import CourseCard from "./course-card"
-import type { Service } from "@/data/services"
+import type { Service } from "@/data/service/index"
 
 interface CoursesGridProps {
   courses: Service[] // Sử dụng Service[] thay vì Course[]
@@ -15,7 +15,7 @@ export default function CoursesGrid({ courses, filteredCourses }: CoursesGridPro
           <p className="text-lg text-gray-600">Chọn khóa học phù hợp với trình độ và mục tiêu của bạn</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-8">
           {filteredCourses.map((course) => (
             <CourseCard key={course.id} course={course} />
           ))}

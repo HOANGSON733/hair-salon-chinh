@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
-import { getAllServices } from "@/data/services"
+import { getAllServices } from "@/data/service/index"
 
 export default function ServicesSection() {
   // Lấy 4 dịch vụ đầu tiên

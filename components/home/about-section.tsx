@@ -25,7 +25,7 @@ export default function AboutSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Về Hair Salon Chính</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Với hơn 10 năm kinh nghiệm trong ngành làm đẹp, Hair Salon Chính tự hào là địa chỉ tin cậy của hàng nghìn
+            Với hơn 15 năm kinh nghiệm trong ngành làm đẹp, Hair Salon Chính tự hào là địa chỉ tin cậy của hàng nghìn
             khách hàng. Chúng tôi cam kết mang đến dịch vụ chất lượng cao với đội ngũ stylist chuyên nghiệp và trang
             thiết bị hiện đại.
           </p>

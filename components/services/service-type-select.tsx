@@ -26,7 +26,7 @@ export default function ServiceTypeSelect({
   return (
     <section className="py-8 bg-white border-b sticky top-[73px] z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-end gap-4">
           <div className="flex items-center gap-2 text-gray-700">
             <Filter className="w-5 h-5 text-orange-600" />
             <span className="font-medium">Lọc theo loại dịch vụ:</span>
