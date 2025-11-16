@@ -15,7 +15,7 @@ export default function DropdownMenu({ items, isVisible }: DropdownMenuProps) {
         <Link
           key={item.name}
           href={item.href}
-          className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
+          className="block px-4 py-2 text-2xl text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
         >
           {item.name}
         </Link>

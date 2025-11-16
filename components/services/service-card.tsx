@@ -2,7 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import type { Service } from "@/data/services"
+import type { Service } from "@/data/service/general-services"
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react"
 
 interface ServiceCardProps {
   service: Service
@@ -44,7 +45,7 @@ export default function ServiceCard({ service, isAcademy = false }: ServiceCardP
           <div className="mb-6">
             <h4 className="text-sm font-semibold text-gray-900 mb-2">Bao gồm:</h4>
             <ul className="text-xs text-gray-600 space-y-1">
-              {service.features.map((feature, idx) => (
+              {service.features.map((feature: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, idx: Key | null | undefined) => (
                 <li key={idx} className="flex items-center">
                   <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
                   {feature}
