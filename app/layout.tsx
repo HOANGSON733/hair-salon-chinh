@@ -5,6 +5,7 @@ import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import FloatingContact from "@/components/floating-contact"
+import Snowfall from "@/components/Snowfall"
 
 export const metadata: Metadata = {
   title: "Hair Salon Chính - Salon Tóc Chuyên Nghiệp",
@@ -67,6 +68,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body suppressHydrationWarning>
+        <Snowfall />
         <Header />
         <main>{children}</main>
         <Footer />
